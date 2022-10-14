@@ -4,7 +4,7 @@
  *  No part *  of this assignment has been copied manually or electronically from any other source
  *  (including 3rd party web sites) or distributed to other students.
  *
- *  Name: yuvraj singh
+ *  Name: yuvraj Singh
  *  Student ID: 155580210
  *  Date: 14/10/2022
  *
