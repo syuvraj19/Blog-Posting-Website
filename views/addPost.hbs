@@ -1,8 +1,12 @@
 <div class="row">
   <div class="col-md-12">
+
     <h2>Add Post</h2>
-    <br>
-    <form method="post" action="/posts/add" enctype="multipart/form-data">
+
+    <br />
+
+    <form method="post" action="/posts/add">
+
       <fieldset>
         <legend>Feature Image</legend>
         <div class="row">
@@ -46,13 +50,16 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="category">Category:</label>
-              <select class="form-control" name="category" id="category">
-                <option value="1">Technology</option>
-                <option value="2">Gaming</option>
-                <option value="3">Fashion</option>
-                <option value="4">Education</option>
-                <option value="5">Wellness</option>
+              {{#if categories}}
+                <select class="form-control" name="category" id="category">
+                  <option value="">Select Category</option>
+                  {{#each categories}}
+                    <option value="{{id}}">{{category}}</option>
+                  {{/each}}
                 </select>
+              {{else}}
+                <div>No Categories</div>
+              {{/if}}
             </div>
           </div>
           <div class="col-md-6">
@@ -68,12 +75,13 @@
           </div>
         </div>
       </fieldset>
-      <hr>
+      <hr />
       <input
         type="submit"
         class="btn btn-primary pull-right"
         value="Add Post"
-      /><br /><br/><br/>
+      /><br /><br /><br />
+
     </form>
   </div>
 </div>
