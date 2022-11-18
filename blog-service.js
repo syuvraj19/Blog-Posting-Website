@@ -10,12 +10,9 @@ var sequelize = new Sequelize('qbaozjzh', 'qbaozjzh', 'rFXq5dTIC3sNrKQ-TgNILtdql
     query: { raw: true }
 });
 
-
-
 var Category = sequelize.define('Category', {
     category: Sequelize.STRING
 });
-
 
 var Post = sequelize.define('Post', {
     body: Sequelize.TEXT,
@@ -159,8 +156,6 @@ module.exports.getCategories = function(){
     });
 }
 
-
-
 module.exports.addCategory = function(categoryData) {
     return new Promise((resolve, reject) => {
         sequelize.sync().then(() => {
@@ -181,7 +176,6 @@ module.exports.addCategory = function(categoryData) {
         });
     });
 }
-
 
 module.exports.deleteCategoryById = function(id) {
     return new Promise((resolve, reject) => {
