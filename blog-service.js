@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('okuwcbty', 'okuwcbty', '98X568J37P9rKjxpAWypmdZAMLo3Ythq', {
-    host: 'hansken.db.elephantsql.com',
+var sequelize = new Sequelize('qbaozjzh', 'qbaozjzh', 'rFXq5dTIC3sNrKQ-TgNILtdqlZ0YHUjL', {
+    host: 'tiny.db.elephantsql.com',
     dialect: 'postgres',
     port: 5432,
     dialectOptions: {
@@ -9,6 +9,7 @@ var sequelize = new Sequelize('okuwcbty', 'okuwcbty', '98X568J37P9rKjxpAWypmdZAM
     },
     query: { raw: true }
 });
+
 
 
 var Category = sequelize.define('Category', {
