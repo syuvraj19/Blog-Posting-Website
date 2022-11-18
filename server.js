@@ -26,10 +26,10 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-    cloud_name: 'dga12xwb2',
-    api_key: '694932861513843',
-    api_secret: '8kE3Cp8pA7PAe4RzWO4ICj9jO1Y',
-    secure: true
+  cloud_name: 'dwslgxp7b',
+  api_key: '474295251232519',
+  api_secret: 'Of9poBBYwVWlYvfiWJBtgJX5nl8',
+  secure: true
 });
 
 const upload = multer();
