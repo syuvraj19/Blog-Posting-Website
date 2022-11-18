@@ -1,18 +1,4 @@
 /*********************************************************************************
- *  WEB322 – Assignment 04
- *  I declare that this assignment is my own work in accordance with Seneca Academic Policy.
- *  No part *  of this assignment has been copied manually or electronically from any other source
- *  (including 3rd party web sites) or distributed to other students.
- *
- *  Name: yuvraj Singh
- *  Student ID: 155580210
- *  Date: 4/11/2022
- *
- *  Online (Cyclic) Link: https://drab-pear-goshawk-coat.cyclic.app/about
- *
- ********************************************************************************/
-
- /*********************************************************************************
 *  WEB322 – Assignment 05
 *  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part of this
 *  assignment has been copied manually or electronically from any other source (including web sites) or 
@@ -41,10 +27,10 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-  cloud_name: 'dwslgxp7b',
-  api_key: '474295251232519',
-  api_secret: 'Of9poBBYwVWlYvfiWJBtgJX5nl8',
-  secure: true
+    cloud_name: 'dga12xwb2',
+    api_key: '694932861513843',
+    api_secret: '8kE3Cp8pA7PAe4RzWO4ICj9jO1Y',
+    secure: true
 });
 
 const upload = multer();
