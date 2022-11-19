@@ -9,11 +9,9 @@ var sequelize = new Sequelize('qbaozjzh', 'qbaozjzh', 'rFXq5dTIC3sNrKQ-TgNILtdql
     query: { raw: true }
 });
 
-
 var Category = sequelize.define('Category', {
     category: Sequelize.STRING
 });
-
 
 var Post = sequelize.define('Post', {
     body: Sequelize.TEXT,
