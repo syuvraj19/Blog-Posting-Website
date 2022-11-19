@@ -1,16 +1,17 @@
 /*********************************************************************************
- *  WEB322 – Assignment 04
- *  I declare that this assignment is my own work in accordance with Seneca Academic Policy.
- *  No part *  of this assignment has been copied manually or electronically from any other source
- *  (including 3rd party web sites) or distributed to other students.
- *
- *  Name: yuvraj Singh
- *  Student ID: 155580210
- *  Date: 18/11/2022
- *
- *  Online (Cyclic) Link: https://drab-pear-goshawk-coat.cyclic.app/about
- *
- ********************************************************************************/
+*  WEB322 – Assignment 05
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part of this
+*  assignment has been copied manually or electronically from any other source (including web sites) or 
+*  distributed to other students.
+* 
+*  Name: Manreet kaur
+*  Student ID: 153851217  
+*  Date: 17/11/2022
+*
+*  Online (Cyclic) Link: https://cooperative-hen-capris.cyclic.app/ 
+*
+********************************************************************************/ 
+
 
 const express = require('express');
 const blogData = require("./blog-service");
@@ -26,9 +27,9 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-    cloud_name: 'dzcflgfrk',
-    api_key: '432829757735758',
-    api_secret: 'nE699AVdA7Ahq7ERfGiC2QxUm9E',
+    cloud_name: 'dga12xwb2',
+    api_key: '694932861513843',
+    api_secret: '8kE3Cp8pA7PAe4RzWO4ICj9jO1Y',
     secure: true
 });
 
@@ -273,6 +274,8 @@ app.get('/posts/delete/:id', function(req,res) {
         res.status(500).send("Unable to Remove Post / Post not found");
     });
 });
+
+
 
 app.use((req, res) => {
     res.status(404).render("404");

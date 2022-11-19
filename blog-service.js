@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-var sequelize = new Sequelize('mdnjsnne', 'mdnjsnne', 'CgPZYj5ZnNi9hSd-GrmKlUII58Oq_7sV', {
-    host: 'hansken.db.elephantsql.com',
+var sequelize = new Sequelize('qbaozjzh', 'qbaozjzh', 'rFXq5dTIC3sNrKQ-TgNILtdqlZ0YHUjL', {
+    host: 'tiny.db.elephantsql.com',
     dialect: 'postgres',
     port: 5432,
     dialectOptions: {
@@ -9,19 +9,10 @@ var sequelize = new Sequelize('mdnjsnne', 'mdnjsnne', 'CgPZYj5ZnNi9hSd-GrmKlUII5
     query: { raw: true }
 });
 
-sequelize
-    .authenticate()
-    .then(function() {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(function(err) {
-        console.log('Unable to connect to the database:', err);
-    });
 
 var Category = sequelize.define('Category', {
     category: Sequelize.STRING
 });
-
 
 
 var Post = sequelize.define('Post', {
@@ -165,6 +156,8 @@ module.exports.getCategories = function(){
         });
     });
 }
+
+
 
 module.exports.addCategory = function(categoryData) {
     return new Promise((resolve, reject) => {
