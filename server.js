@@ -4,11 +4,11 @@
 *  assignment has been copied manually or electronically from any other source (including web sites) or 
 *  distributed to other students.
 * 
-*  Name: Manreet kaur
-*  Student ID: 153851217  
-*  Date: 17/11/2022
+*  Name: yuvraj singh
+*  Student ID: 155580210  
+*  Date: 18/11/2022
 *
-*  Online (Cyclic) Link: https://cooperative-hen-capris.cyclic.app/ 
+*  Online (Cyclic) Link: https://drab-pear-goshawk-coat.cyclic.app/about
 *
 ********************************************************************************/ 
 
@@ -27,11 +27,11 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-    cloud_name: 'dga12xwb2',
-    api_key: '694932861513843',
-    api_secret: '8kE3Cp8pA7PAe4RzWO4ICj9jO1Y',
+    cloud_name: 'dwslgxp7b',
+    api_key: '474295251232519',
+    api_secret: 'Of9poBBYwVWlYvfiWJBtgJX5nl8',
     secure: true
-});
+  });
 
 const upload = multer();
 
