@@ -6,7 +6,7 @@
  *
  *  Name: yuvraj Singh
  *  Student ID: 155580210
- *  Date: 4/11/2022
+ *  Date: 18/11/2022
  *
  *  Online (Cyclic) Link: https://drab-pear-goshawk-coat.cyclic.app/about
  *
@@ -26,9 +26,9 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-    cloud_name: 'dga12xwb2',
-    api_key: '694932861513843',
-    api_secret: '8kE3Cp8pA7PAe4RzWO4ICj9jO1Y',
+    cloud_name: 'dzcflgfrk',
+    api_key: '432829757735758',
+    api_secret: 'nE699AVdA7Ahq7ERfGiC2QxUm9E',
     secure: true
 });
 
