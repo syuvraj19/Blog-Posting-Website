@@ -157,6 +157,7 @@ app.get('/posts', (req, res) => {
 
 });
 
+
 app.get("/posts/add", (req, res) => {
     blogData.getCategories().then((data) => {
         res.render("addPost",{categories: data});
@@ -201,7 +202,7 @@ app.get('/blog/:id', async (req, res) => {
         }
 
         // sort the published posts by postDate
-        posts.sort((p,q) => new Date(q.postDate) - new Date(p.postDate));
+        posts.sort((a,b) => new Date(b.postDate) - new Date(a.postDate));
 
         // store the "posts" and "post" data in the viewData object (to be passed to the view)
         viewData.posts = posts;
@@ -272,8 +273,6 @@ app.get('/posts/delete/:id', function(req,res) {
         res.status(500).send("Unable to Remove Post / Post not found");
     });
 });
-
-
 
 app.use((req, res) => {
     res.status(404).render("404");
