@@ -29,12 +29,12 @@
   const HTTP_PORT = process.env.PORT || 8080;
   
   cloudinary.config({
-    cloud_name: 'dzcflgfrk',
-    api_key: '432829757735758',
-    api_secret: 'nE699AVdA7Ahq7ERfGiC2QxUm9E',
+    cloud_name: 'dwslgxp7b',
+    api_key: '474295251232519',
+    api_secret: 'Of9poBBYwVWlYvfiWJBtgJX5nl8',
     secure: true
-});
-
+  });
+  
   const upload = multer();
   
   app.engine(".hbs", exphbs.engine({
