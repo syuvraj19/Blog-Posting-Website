@@ -5,7 +5,7 @@
 
     <br />
 
-    <form method="post" action="/posts/add" >
+    <form method="post" action="/posts/add" enctype="multipart/form-data">
 
       <fieldset>
         <legend>Feature Image</legend>
@@ -48,7 +48,7 @@
                   {{/each}}
                 </select>
               {{else}}
-                    <div>No Categories</div>
+                <div>No Categories</div>
               {{/if}}
             </div>
           </div>
@@ -63,8 +63,11 @@
             </div>
           </div>
         </div>
+
       </fieldset>
+
       <hr />
+
       <input type="submit" class="btn btn-primary pull-right" value="Add Post" /><br /><br /><br />
 
     </form>
