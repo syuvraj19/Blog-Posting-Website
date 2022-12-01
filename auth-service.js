@@ -14,7 +14,7 @@ var userSchema = new mongoose.Schema({
     }]
 });
 
-let User; // to be defined on new connection (see initialize)
+let User;
 
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
@@ -67,14 +67,13 @@ module.exports.checkUser = function(userData) {
                 bcrypt.compare(userData.password, users[0].password, function (err, result) {
                     if (result === true) {
                         if (users[0].loginHistory == null)
-                            users[0].loginHistory = []; // make array if none exists (first login)
+                            users[0].loginHistory = [];
 
                         users[0].loginHistory.push({ 
                             dateTime: (new Date()).toString(),
                             userAgent: userData.userAgent
                         });
                         
-                        // using updateOne instead of update
                         User.updateOne({ userName: users[0].userName },
                             { $set: { loginHistory: users[0].loginHistory } }
                         ).exec()
