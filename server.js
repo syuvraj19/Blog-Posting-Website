@@ -70,6 +70,7 @@
   
   app.use(express.static('public'));
   
+  //WEEK-10 NOTES
   app.use(clientSessions({
       cookieName: "session", // this is the object name that will be added to 'req'
       secret: "something kept hidden or unexplained", // this should be a long un-guessable string.
