@@ -10,8 +10,6 @@ var sequelize = new Sequelize('mdnjsnne', 'mdnjsnne', 'CgPZYj5ZnNi9hSd-GrmKlUII5
     query: { raw: true }
 });
 
-// Define a "Post" model
-
 var Post = sequelize.define('Post', {
     body: Sequelize.TEXT,
     title: Sequelize.STRING,
@@ -20,13 +18,10 @@ var Post = sequelize.define('Post', {
     published: Sequelize.BOOLEAN
 });
 
-// Define a "Category" model
-
 var Category = sequelize.define('Category', {
     category: Sequelize.STRING
 });
 
-// set up association between Post & Category
 Post.belongsTo(Category, {foreignKey: 'category'})
 
 

@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
 
-// var Schema = mongoose.Schema; Is this necessary???
 var userSchema = new mongoose.Schema({
     "userName" : {
         "type" : String,
@@ -17,13 +16,12 @@ var userSchema = new mongoose.Schema({
 
 let User; // to be defined on new connection (see initialize)
 
-
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
         let db = mongoose.createConnection("mongodb+srv://yuvraj:yuvraj@senecaweb.uqew7qu.mongodb.net/?retryWrites=true&w=majority");
 
         db.on('error', (err)=>{
-            reject(err); // reject the promise with the provided error
+            reject(err);
         });
         db.once('open', ()=>{
            User = db.model("users", userSchema);
